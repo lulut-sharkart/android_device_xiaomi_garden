@@ -92,7 +92,11 @@
     <!-- Whether the display cutout region of the main built-in display should be forced to
          black in software (to avoid aliasing or emulate a cutout that is not physically existent).
     -->
-    <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
+    <bool name="config_fillMainBuiltInDisplayCutout">false</bool>
+
+    <!-- If true, and there is a cutout on the main built in display, the cutout will be masked
+         by shrinking the display such that it does not overlap the cutout area. -->
+    <bool name="config_maskMainBuiltInDisplayCutout">false</bool>
 
     <!-- Is the device capable of hot swapping an ICC Card -->
      <bool name="config_hotswapCapable">true</bool>
@@ -237,6 +241,11 @@
     <!-- Height of the status bar -->
      <dimen name="status_bar_height_portrait">24.0dip</dimen>
      <dimen name="status_bar_height_landscape">24.0dip</dimen>
+
+    <!-- Can't link to other dimensions here, but this should be status_bar_height_landscape -->
+    <dimen name="quick_qs_offset_height">24.0dip</dimen>
+    <!-- Total height of QQS in landscape; quick_qs_offset_height + 128 -->
+    <dimen name="quick_qs_total_height">152.0dip</dimen>
 
     <!-- User activity timeout: Maximum screen dim duration as a percentage of screen off timeout.
     
@@ -682,7 +691,12 @@
          appended after the path string to interpret coordinates in dp instead of px units.
          Note that a physical cutout should be configured in pixels for the best results.
     -->
-    <string name="config_mainBuiltInDisplayCutout">M-59,13.521603 C-51.3411734,20.2116468 -45.8262261,25.5003131 -42.4551581,29.3876018 C-37.4060696,35.2110207 -32.5523328,41.2298059 -26.3762157,45.6443331 C-22.5105074,48.4020038 -18.1301226,50.536005 -13.5506295,51.9524108 C-9.15897443,53.3087038 -4.57948127,55 1.18885336e-05,55 C4.57574829,55 9.14772792,53.3087038 13.539383,51.9524108 C18.1263897,50.536005 22.5067744,48.4020038 26.3649692,45.6443331 C32.5523566,41.2298059 37.4060934,35.2110207 42.4551819,29.3876018 C45.8237453,25.5003131 51.3386847,20.2116468 59,13.521603 L59,0 L-59,0 L-59,13.521603 Z</string>
+    <string name="config_mainBuiltInDisplayCutout">M 0,0 L 0, 0 C 0,0 0,0 0,0</string>
+    <string name="config_mainBuiltInDisplayCutoutRectApproximation">M 0,0 L 0, 0 C 0,0 0,0 0,0</string>
+
+    <!-- Max visible notification icons -->
+    <integer name="config_maxVisibleNotificationIcons">4</integer>
+    <integer name="config_maxVisibleNotificationIconsWhenDark">5</integer>
 
     <!-- Array of ConnectivityManager.TYPE_xxxx values allowable for tethering -->
     <!-- Common options are [1, 4] for TYPE_WIFI and TYPE_MOBILE_DUN or
