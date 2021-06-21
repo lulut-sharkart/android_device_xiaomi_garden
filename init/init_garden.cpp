@@ -106,7 +106,7 @@ void vendor_load_properties()
     property_set("dalvik.vm.heapminfree", heapminfree);
     property_set("dalvik.vm.heapmaxfree", heapmaxfree);
 
-    string model = "Redmi G25 Series";
+    string model = "Xiaomi MT6765 G Series";
 
     // Override all partitions' props
     string prop_partitions[] = { "", "odm.", "product.", "system.", "vendor." };

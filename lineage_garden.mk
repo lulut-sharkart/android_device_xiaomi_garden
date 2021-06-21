@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-# Inherit from dandelion device makefile
+# Inherit from garden device makefile
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Inherit from those products. Most specific first.
@@ -26,17 +26,17 @@ TARGET_BOOT_ANIMATION_RES := 720
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_BRAND := Redmi
-PRODUCT_DEVICE := dandelion
+PRODUCT_BRAND := Xiaomi
+PRODUCT_DEVICE := garden
 PRODUCT_MANUFACTURER := xiaomi
-PRODUCT_NAME := lineage_dandelion
+PRODUCT_NAME := lineage_garden
 
 # Build info
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 TARGET_VENDOR := xiaomi
-TARGET_VENDOR_PRODUCT_NAME := dandelion
+TARGET_VENDOR_PRODUCT_NAME := garden
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="dandelion-user 10 QP1A.190711.020 V12.0.11.0.QCDMIXM release-keys"
+    PRIVATE_BUILD_DESC="angelica-user 10 QP1A.190711.020 V12.0.4.0.QCRMIXM release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := google/sunfish/sunfish:11/RQ2A.210305.006/7119741:user/release-keys
