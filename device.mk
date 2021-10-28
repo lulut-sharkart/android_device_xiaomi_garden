@@ -122,3 +122,12 @@ PRODUCT_AAPT_PREBUILT_DPI := xhdpi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/xyz.extras.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/xyz.extras.xml \
     $(LOCAL_PATH)/permissions/xyz.extras.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/xyz.extras.xml
+
+# Input
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/idc/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc \
+    $(DEVICE_PATH)/configs/idc/uinput-focaltech.idc:system/usr/idc/uinput-focaltech.idc
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/keylayout/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl \
+    $(DEVICE_PATH)/configs/keylayout/uinput-focaltech.kl:system/usr/keylayout/uinput-focaltech.kl
