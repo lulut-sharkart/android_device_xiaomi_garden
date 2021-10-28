@@ -117,3 +117,8 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_AAPT_CONFIG := xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 PRODUCT_AAPT_PREBUILT_DPI := xhdpi
+
+# [DNM] Temp permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/permissions/xyz.extras.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/xyz.extras.xml \
+    $(LOCAL_PATH)/permissions/xyz.extras.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/xyz.extras.xml
