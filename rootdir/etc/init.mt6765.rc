@@ -24,10 +24,10 @@ on init
     chown system system /dev/input/event3
 
 on property:persist.sys.garden.dt2w=0
-    exec /system/bin/sendevent /dev/input/event3 0 1 4
+    exec -- /system/bin/dt2w_event 4
 
 on property:persist.sys.garden.dt2w=1
-    exec /system/bin/sendevent /dev/input/event3 0 1 5
+    exec -- /system/bin/dt2w_event 5
 
 on fs
     mount_all /vendor/etc/fstab.mt6765 --early
