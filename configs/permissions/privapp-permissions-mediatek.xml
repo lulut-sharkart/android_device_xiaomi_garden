@@ -27,7 +27,7 @@ applications that come with the platform --> <permissions>
         name="android.permission.NETWORK_SIGNAL_STRENGTH_WAKEUP"/>
     </privapp-permissions> <privapp-permissions
     package="org.lineageos.xiaomi.imsinit">
-        <permissions name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
     </privapp-permissions> <privapp-permissions 
     package="com.mediatek.simprocessor">
         <permission name="android.permission.INTERACT_ACROSS_USERS"/> 
