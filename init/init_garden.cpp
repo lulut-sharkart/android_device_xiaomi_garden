@@ -112,29 +112,5 @@ void vendor_load_properties()
     string prop_partitions[] = { "", "odm.", "product.", "system.", "vendor." };
     for (const string &prop : prop_partitions) {
         property_override(string("ro.product.") + prop + string("model"), model);
-
-    std::string region = GetProperty("ro.boot.hwc", "");
-    std::string hwname = GetProperty("ro.boot.hwname", "");
-
-    if (hwname == "angelica") {
-        property_override("ro.product.brand", "Redmi");
-        property_override("ro.product.model", "Redmi 9C");
-        property_override("ro.product.device", "angelica");
-    } else if (hwname == "angelicain") {
-        property_override("ro.product.brand", "POCO");
-        property_override("ro.product.model", "POCO C3");
-        property_override("ro.product.device", "angelicain");
-    } else if (hwname == "angelican") {
-        property_override("ro.product.brand", "Redmi");
-        property_override("ro.product.model", "Redmi 9C NFC");
-        property_override("ro.product.device", "angelican");
-    } else if (hwname == "cattail") {
-        property_override("ro.product.brand", "Redmi");
-        property_override("ro.product.model", "Redmi 9");
-        property_override("ro.product.device", "cattail");
-    } else if (hwname == "dandelion") {
-        property_override("ro.product.brand", "Redmi");
-        property_override("ro.product.model", "Redmi 9A");
-        property_override("ro.product.device", "dandelion");
     }
 }
