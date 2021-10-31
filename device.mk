@@ -112,8 +112,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.telephony.ims.xml \
-    $(LOCAL_PATH)/permissions/privapp-permissions-garden.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-garden.xml \
-    $(LOCAL_PATH)/permissions/product-privapp-permissions-garden.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-garden.xml
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-garden.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-garden.xml \
+    $(LOCAL_PATH)/configs/permissions/product-privapp-permissions-garden.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-garden.xml
 
 # IMS
 PRODUCT_COPY_FILES += \
@@ -138,8 +138,8 @@ PRODUCT_AAPT_PREBUILT_DPI := xhdpi
 
 # [DNM] Temp permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/permissions/xyz.extras.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/xyz.extras.xml \
-    $(LOCAL_PATH)/permissions/xyz.extras.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/xyz.extras.xml
+    $(LOCAL_PATH)/configs/permissions/xyz.extras.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/xyz.extras.xml \
+    $(LOCAL_PATH)/configs/permissions/xyz.extras.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/xyz.extras.xml
 
 # Input
 PRODUCT_COPY_FILES += \
