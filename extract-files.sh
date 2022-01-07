@@ -34,6 +34,14 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
+function blob_fixup {
+    case "$1" in
+        lib/libmtk_vt_service.so)
+            "$PATCHELF" --add-needed "libshim_mtk_vt_service.so" "$2"
+            ;;
+    esac
+}
+
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
 SECTION=
