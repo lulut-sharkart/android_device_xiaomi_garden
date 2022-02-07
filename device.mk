@@ -141,6 +141,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/xyz.extras.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/xyz.extras.xml \
     $(LOCAL_PATH)/configs/permissions/xyz.extras.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/xyz.extras.xml
 
+# IORap
+PRODUCT_PRODUCT_PROPERTIES += \
+     ro.iorapd.enable=true
+
 # Input
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/idc/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc \
