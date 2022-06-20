@@ -3,6 +3,6 @@
 	"remote": "github",
 	"repository": "Yukina-Supremacy/android_vendor_xiaomi_garden",
 	"target_path": "vendor/xiaomi/garden",
-	"branch": "twelve"
+	"branch": "twelve29"
   }
 ]
