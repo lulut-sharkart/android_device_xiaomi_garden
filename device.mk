@@ -30,8 +30,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/audio_policy_configuration.xml
 
 # Treble
-PRODUCT_TARGET_VNDK_VERSION := 29
-PRODUCT_SHIPPING_API_LEVEL := 29
+PRODUCT_TARGET_VNDK_VERSION := 30
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
