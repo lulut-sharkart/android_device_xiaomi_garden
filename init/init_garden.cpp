@@ -138,32 +138,33 @@ void vendor_load_properties()
     property_override(string("ro.charger.enable_suspend"), string("true"));
 
     std::string region = GetProperty("ro.boot.hwc", "");
-    std::string hwname = GetProperty("ro.boot.hwname", "");
+    std::string product_name = GetProperty("ro.product.name", "");
 
-    if (hwname == "angelica") {
+    if (product_name == "angelica") {
         property_override("ro.product.brand", "Redmi");
         property_override("ro.product.model", "Redmi 9C");
         property_override("ro.product.device", "angelica");
-    } else if (hwname == "angelicain") {
+    } else if (product_name == "angelicain") {
         property_override("ro.product.brand", "POCO");
         property_override("ro.product.model", "POCO C3");
         property_override("ro.product.device", "angelicain");
-    } else if (hwname == "angelican") {
+    } else if (product_name == "dandelion_id2") { // Redmi 10A Indonesia
+        property_override("ro.product.model", "Redmi 10A");
+    } else if (product_name == "angelican") {
         property_override("ro.product.brand", "Redmi");
         property_override("ro.product.model", "Redmi 9C NFC");
         property_override("ro.product.device", "angelican");
-    } else if (hwname == "cattail") {
+    } else if (product_name == "cattail") {
         property_override("ro.product.brand", "Redmi");
         property_override("ro.product.model", "Redmi 9");
         property_override("ro.product.device", "cattail");
-    } else if (hwname == "dandelion") {
+    } else if (product_name == "dandelion") {
         property_override("ro.product.brand", "Redmi");
         property_override("ro.product.device", "dandelion");
         if (region == "India_9i") {
             property_override("ro.product.model", "Redmi 9I");
         } else {
             property_override("ro.product.model", "Redmi 9A");
-        }
     }
 
 }
